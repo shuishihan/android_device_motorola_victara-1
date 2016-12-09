@@ -638,6 +638,9 @@ on enable-low-power
     rm /data/system/default_values
     start mpdecision
 
+    # Wifi firmware reload path
+    chown wifi wifi /sys/module/wlan/parameters/fwpath
+
 service atfwd /system/bin/ATFWD-daemon
     class late_start
     user system
