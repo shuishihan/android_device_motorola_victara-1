@@ -99,7 +99,6 @@ service charge_only_mode /system/bin/charge_only_mode
 service batt_health /system/bin/batt_health
     class main
     user mot_pwric
-    group mot_pwric net_admin log
 
 service hvdcp /system/bin/hvdcp
     class main
