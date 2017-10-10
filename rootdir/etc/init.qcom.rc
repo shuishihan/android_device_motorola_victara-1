@@ -214,6 +214,9 @@ on post-fs-data
     mkdir /data/system 0775 system system
     #symlink /data/misc/wifi/wpa_supplicant /data/system/wpa_supplicant
 
+    # Wifi firmware reload path
+    chown wifi wifi /sys/module/wlan/parameters/fwpath
+
     #Create directories for gpsone_daemon services
     mkdir /data/misc/gpsone_d 0770 system gps
 
@@ -431,9 +434,6 @@ service qcom-sh /system/bin/sh /init.qcom.sh
     class late_start
     user root
     oneshot
-
-    # Wifi firmware reload path
-    chown wifi wifi /sys/module/wlan/parameters/fwpath
 
 service atfwd /system/bin/ATFWD-daemon
     class late_start
