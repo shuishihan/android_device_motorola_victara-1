@@ -100,6 +100,7 @@ PRODUCT_PACKAGES += \
     camera.device@3.2-impl \
     camera.msm8974 \
     libshims_sensorlistener
+
 # CRDA
 PRODUCT_PACKAGES += \
     crda \
@@ -117,13 +118,12 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.composer@2.1-impl \
     android.hardware.graphics.mapper@2.0-impl \
-    android.hardware.memtrack@1.0-impl \
     copybit.msm8974 \
     gralloc.msm8974 \
     hwcomposer.msm8974 \
     libgenlock \
     memtrack.msm8974
-    
+
 # Memtrack HAL
 PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl
@@ -159,8 +159,8 @@ PRODUCT_PACKAGES += \
     keystore.msm8974
 
 # Gatekeeper HAL
-PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0-impl
+#PRODUCT_PACKAGES += \
+#    android.hardware.gatekeeper@1.0-impl
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -181,15 +181,15 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml
 
 # NFC
-PRODUCT_PACKAGES += \
-    libnfc \
-    libnfc_jni \
-    nfc_nci.bcm2079x.default \
-    NfcNci \
-    Tag \
-    com.android.nfc_extras \
-    android.hardware.nfc@1.0-impl
-    
+#PRODUCT_PACKAGES += \
+#    libnfc \
+#    libnfc_jni \
+#    nfc_nci.bcm2079x.default \
+#    NfcNci \
+#    Tag \
+#    com.android.nfc_extras \
+#    android.hardware.nfc@1.0-impl
+
 
 PRODUCT_COPY_FILES += \
     device/motorola/victara/nfc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
