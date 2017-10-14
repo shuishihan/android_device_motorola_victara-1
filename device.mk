@@ -243,7 +243,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine-victara.conf:system/etc/thermal-engine-victara.conf
 
+# Thermal Hal
 PRODUCT_PACKAGES += \
+    android.hardware.thermal@1.0-impl \
     libshims_thermal
 
 # Torch
