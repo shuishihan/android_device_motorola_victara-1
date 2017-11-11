@@ -272,12 +272,15 @@ PRODUCT_PACKAGES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
+    hostapd \
+    hostapd_default.conf \
     hostapd.accept \
     hostapd.deny \
     libwpa_client \
     wcnss_service \
     wpa_supplicant \
-    wificond
+    wificond \
+    wifilogd
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
