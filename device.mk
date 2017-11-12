@@ -53,7 +53,9 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 
+# Dalvik
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
 
 # Art
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -80,7 +82,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@2.0-impl \
     android.hardware.broadcastradio@1.0-impl \
     android.hardware.soundtrigger@2.0-impl
-
 
 # Audio configuration
 PRODUCT_COPY_FILES += \
@@ -124,18 +125,11 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8974 \
     libgenlock \
     memtrack.msm8974
-    
-# Memtrack HAL
-PRODUCT_PACKAGES += \
-    android.hardware.memtrack@1.0-impl
-
-# GNSS HAL
-PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.0-impl
 
 # GPS
 PRODUCT_PACKAGES += \
-    gps.msm8974
+    gps.msm8974 \
+    android.hardware.gnss@1.0-impl
 
 # HIDL
 PRODUCT_COPY_FILES += \
@@ -266,12 +260,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl
 
-# WiFi HAL
-PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service
-
 # Wifi
 PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service \
     hostapd \
     hostapd_default.conf \
     hostapd.accept \

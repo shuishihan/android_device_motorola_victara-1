@@ -11,17 +11,12 @@ persist.audio.fluence.voicerec=false
 ro.config.vc_call_vol_steps=7
 ro.qc.sdk.audio.fluencetype=fluence
 use.voice.path.for.pcm.voip=true
-af.resampler.quality=7
 persist.audio.dualmic.config=endfire
 # FM maximum volume be between 0 and 8192 (0dB)
 ro.audio.fm_max_volume=5793
 
 # Bluetooth
 qcom.bluetooth.soc=smd
-ro.bluetooth.dun=true 
-ro.bluetooth.hfp.ver=1.6
-ro.bluetooth.sap=true
-ro.qualcomm.bt.hci_transport=smd
 
 # Camera
 camera2.portability.force_api=1
@@ -76,10 +71,6 @@ rild.libpath=/vendor/lib/libril-qc-qmi-1.so
 ril.subscription.types=NV,RUIM
 ro.data.large_tcp_window_size=true
 ro.use_data_netmgrd=true
-
-# NFC
-debug.nfc.fw_download=true
-debug.nfc.fw_boot_download=false
 
 # Storage
 ro.sys.sdcardfs=false

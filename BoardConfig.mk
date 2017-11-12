@@ -88,15 +88,7 @@ TARGET_USES_ION := true
 USE_OPENGL_RENDERER := true
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
-
-# Shader cache config options
-# Maximum size of the  GLES Shaders that can be cached for reuse.
-# Increase the size if shaders of size greater than 12KB are used.
 MAX_EGL_CACHE_KEY_SIZE := 12*1024
-
-# Maximum GLES shader cache size for each app to store the compiled shader
-# binaries. Decrease the size if RAM or Flash Storage size is a limitation
-# of the device.
 MAX_EGL_CACHE_SIZE := 2048*1024
 
 # Fonts
@@ -125,8 +117,6 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 10970071040
 
 # Power HAL
 TARGET_POWERHAL_VARIANT := qcom
-
-# Qualcomm support
 
 # Recovery
 BOARD_HAS_NO_SELECT_BUTTON := true
